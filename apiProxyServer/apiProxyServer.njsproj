@@ -11,7 +11,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1380440a-3df7-4aaf-a97d-1b0775f17247</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,11 +29,28 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="config.env" />
+    <Content Include=".env" />
+    <Content Include=".eslintrc.json" />
+    <Content Include=".gitignore" />
+    <Content Include="authenticator\Authenticator.js" />
+    <Content Include="authenticator\BasicAuthenticator.js" />
+    <Content Include="cache\Cache.js" />
+    <Content Include="cache\NodeCacheAdapter.js" />
     <Content Include="index.js" />
-    <Content Include="server.js" />
+    <Content Include="logger\Logger.js" />
+    <Content Include="logger\MorganLogger.js" />
+    <Content Include="rateLimiter\ExpressRateLimiter.js" />
+    <Content Include="rateLimiter\RateLimiter.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="services\AccuWeatherService.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cache\" />
+    <Folder Include="logger\" />
+    <Folder Include="authenticator\" />
+    <Folder Include="services\" />
+    <Folder Include="rateLimiter\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
